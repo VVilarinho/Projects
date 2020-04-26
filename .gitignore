@@ -1,0 +1,14 @@
+
+# .v4p backup files
+*~.xml
+
+#VS Code temp folders
+.vs
+
+# Dynamic plugins .dll
+bin/
+
+#NuGet
+packages
+!packages/repositories.config
+!bin
