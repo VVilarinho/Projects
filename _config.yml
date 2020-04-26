@@ -1,3 +1,0 @@
-theme: jekyll-theme-midnight
-
-git push https://[Username]:$(GithubKey)@github.com/VVilarinho/Projects.git head:refs/heads/master
