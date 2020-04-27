@@ -7,8 +7,10 @@
 
 # Dynamic plugins .dll
 bin/
+obj/
 
 #NuGet
 packages
 !packages/repositories.config
 !bin
+!obj
