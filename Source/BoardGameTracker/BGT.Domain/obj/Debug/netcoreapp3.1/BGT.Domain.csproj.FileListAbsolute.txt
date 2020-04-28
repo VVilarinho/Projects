@@ -1,0 +1,8 @@
+F:\Code\Projects\Source\BoardGameTracker\BGT.Domain\bin\Debug\netcoreapp3.1\BGT.Domain.deps.json
+F:\Code\Projects\Source\BoardGameTracker\BGT.Domain\bin\Debug\netcoreapp3.1\BGT.Domain.dll
+F:\Code\Projects\Source\BoardGameTracker\BGT.Domain\bin\Debug\netcoreapp3.1\BGT.Domain.pdb
+F:\Code\Projects\Source\BoardGameTracker\BGT.Domain\obj\Debug\netcoreapp3.1\BGT.Domain.csproj.CoreCompileInputs.cache
+F:\Code\Projects\Source\BoardGameTracker\BGT.Domain\obj\Debug\netcoreapp3.1\BGT.Domain.AssemblyInfoInputs.cache
+F:\Code\Projects\Source\BoardGameTracker\BGT.Domain\obj\Debug\netcoreapp3.1\BGT.Domain.AssemblyInfo.cs
+F:\Code\Projects\Source\BoardGameTracker\BGT.Domain\obj\Debug\netcoreapp3.1\BGT.Domain.dll
+F:\Code\Projects\Source\BoardGameTracker\BGT.Domain\obj\Debug\netcoreapp3.1\BGT.Domain.pdb
