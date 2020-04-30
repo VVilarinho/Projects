@@ -11,7 +11,7 @@ namespace BGT.Domain.Entities
         public int MyProperty { get; set; }
         public string Location { get; set; }
         public DateTime EventDay { get; set; }
-        public int PictureID { get; set; }
+        public int PictureID { get; set; } 
         public GameEventResult EventResult { get; set; }        
     }
 }
