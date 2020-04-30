@@ -1,0 +1,12 @@
+F:\Code\Projects\Source\BoardGameTracker\BGT.Infrastructure\bin\Debug\netcoreapp3.1\BGT.Infrastructure.deps.json
+F:\Code\Projects\Source\BoardGameTracker\BGT.Infrastructure\bin\Debug\netcoreapp3.1\BGT.Infrastructure.dll
+F:\Code\Projects\Source\BoardGameTracker\BGT.Infrastructure\bin\Debug\netcoreapp3.1\BGT.Infrastructure.pdb
+F:\Code\Projects\Source\BoardGameTracker\BGT.Infrastructure\obj\Debug\netcoreapp3.1\BGT.Infrastructure.csprojAssemblyReference.cache
+F:\Code\Projects\Source\BoardGameTracker\BGT.Infrastructure\obj\Debug\netcoreapp3.1\BGT.Infrastructure.csproj.CoreCompileInputs.cache
+F:\Code\Projects\Source\BoardGameTracker\BGT.Infrastructure\obj\Debug\netcoreapp3.1\BGT.Infrastructure.AssemblyInfoInputs.cache
+F:\Code\Projects\Source\BoardGameTracker\BGT.Infrastructure\obj\Debug\netcoreapp3.1\BGT.Infrastructure.AssemblyInfo.cs
+F:\Code\Projects\Source\BoardGameTracker\BGT.Infrastructure\obj\Debug\netcoreapp3.1\BGT.Infrastructure.dll
+F:\Code\Projects\Source\BoardGameTracker\BGT.Infrastructure\obj\Debug\netcoreapp3.1\BGT.Infrastructure.pdb
+F:\Code\Projects\Source\BoardGameTracker\BGT.Infrastructure\bin\Debug\netcoreapp3.1\BGT.Domain.dll
+F:\Code\Projects\Source\BoardGameTracker\BGT.Infrastructure\bin\Debug\netcoreapp3.1\BGT.Domain.pdb
+F:\Code\Projects\Source\BoardGameTracker\BGT.Infrastructure\obj\Debug\netcoreapp3.1\BGT.Infrastructure.csproj.CopyComplete

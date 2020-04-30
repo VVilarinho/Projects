@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "BGT.Infrastructure/1.0.0": {
+        "dependencies": {
+          "BGT.Domain": "1.0.0"
+        },
+        "runtime": {
+          "BGT.Infrastructure.dll": {}
+        }
+      },
+      "BGT.Domain/1.0.0": {
+        "runtime": {
+          "BGT.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "BGT.Infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "BGT.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
