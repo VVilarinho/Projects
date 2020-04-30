@@ -1,6 +1,8 @@
-﻿namespace BGT.Domain
+﻿using BGT.Domain.Common;
+
+namespace BGT.Domain
 {
-    public class PlayerInfo
+    public class PlayerInfo : AuditableEntity
     {
         public string PlayerID { get; set; }
 

@@ -1,9 +1,10 @@
-﻿using System;
+﻿using BGT.Domain.Common;
+using System;
 using System.Collections.Generic;
 
 namespace BGT.Domain.Entities
 {
-    public class GameEvent
+    public class GameEvent : AuditableEntity
     {
         public int GameEventID { get; set; }
         public BoardGameInfo BoardGameInfo { get; set; }

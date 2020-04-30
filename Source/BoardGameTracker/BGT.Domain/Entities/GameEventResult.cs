@@ -1,9 +1,10 @@
-﻿using BGT.Domain.Enums;
+﻿using BGT.Domain.Common;
+using BGT.Domain.Enums;
 using System;
 
 namespace BGT.Domain.Entities
 {
-    public class GameEventResult
+    public class GameEventResult : AuditableEntity
     {
         public int WinnerPLayerID { get; set; }
         public int NumberOfPoint { get; set; }
