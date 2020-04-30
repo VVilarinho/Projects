@@ -6,3 +6,4 @@ F:\Code\Projects\Source\BoardGameTracker\BGT.Domain\obj\Debug\netcoreapp3.1\BGT.
 F:\Code\Projects\Source\BoardGameTracker\BGT.Domain\obj\Debug\netcoreapp3.1\BGT.Domain.AssemblyInfo.cs
 F:\Code\Projects\Source\BoardGameTracker\BGT.Domain\obj\Debug\netcoreapp3.1\BGT.Domain.dll
 F:\Code\Projects\Source\BoardGameTracker\BGT.Domain\obj\Debug\netcoreapp3.1\BGT.Domain.pdb
+F:\Code\Projects\Source\BoardGameTracker\BGT.Domain\obj\Debug\netcoreapp3.1\BGT.Domain.csprojAssemblyReference.cache

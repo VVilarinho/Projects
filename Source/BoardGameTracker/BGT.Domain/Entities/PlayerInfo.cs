@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace BGT.Domain
+﻿namespace BGT.Domain
 {
     public class PlayerInfo
     {
