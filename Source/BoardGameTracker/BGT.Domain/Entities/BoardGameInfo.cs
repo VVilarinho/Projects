@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace BGT.Domain.Entities
+﻿namespace BGT.Domain.Entities
 {
     public class BoardGameInfo
     {
