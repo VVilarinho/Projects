@@ -16,3 +16,5 @@ packages
 !packages/repositories.config
 !bin
 !obj
+Source/BoardGameTracker/BGT.Domain/obj/Debug/netcoreapp3.1/BGT.Domain.AssemblyInfo.cs
+Source/BoardGameTracker/BGT.Domain/obj/Debug/netcoreapp3.1/BGT.Domain.AssemblyInfoInputs.cache
