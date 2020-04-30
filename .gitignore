@@ -8,6 +8,8 @@
 # Dynamic plugins .dll
 bin/
 obj/
+release/
+debug
 
 #NuGet
 packages
