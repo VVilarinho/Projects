@@ -1,0 +1,23 @@
+
+
+A player has information on
+ - Name
+ - ID
+
+
+ A boardgame has information on
+ - ID
+ - Name
+ {Get info from BGG?}
+ - Description
+ - One image/Logo
+ - Owner
+
+
+ - GameID
+ - List of Players
+ - Events/Number of games/Wins/Defeats
+ - Points/Position in scale of win
+ - Location
+ - Date/Time
+ - Picture taken/Uploaded

@@ -6,4 +6,16 @@ F:\Code\Projects\Source\BoardGameTracker\BGT.Domain\obj\Debug\netcoreapp3.1\BGT.
 F:\Code\Projects\Source\BoardGameTracker\BGT.Domain\obj\Debug\netcoreapp3.1\BGT.Domain.AssemblyInfo.cs
 F:\Code\Projects\Source\BoardGameTracker\BGT.Domain\obj\Debug\netcoreapp3.1\BGT.Domain.dll
 F:\Code\Projects\Source\BoardGameTracker\BGT.Domain\obj\Debug\netcoreapp3.1\BGT.Domain.pdb
+<<<<<<< HEAD
 F:\Code\Projects\Source\BoardGameTracker\BGT.Domain\obj\Debug\netcoreapp3.1\BGT.Domain.csprojAssemblyReference.cache
+=======
+D:\Code\Projects\Source\BoardGameTracker\BGT.Domain\bin\Debug\netcoreapp3.1\BGT.Domain.deps.json
+D:\Code\Projects\Source\BoardGameTracker\BGT.Domain\bin\Debug\netcoreapp3.1\BGT.Domain.dll
+D:\Code\Projects\Source\BoardGameTracker\BGT.Domain\bin\Debug\netcoreapp3.1\BGT.Domain.pdb
+D:\Code\Projects\Source\BoardGameTracker\BGT.Domain\obj\Debug\netcoreapp3.1\BGT.Domain.csprojAssemblyReference.cache
+D:\Code\Projects\Source\BoardGameTracker\BGT.Domain\obj\Debug\netcoreapp3.1\BGT.Domain.csproj.CoreCompileInputs.cache
+D:\Code\Projects\Source\BoardGameTracker\BGT.Domain\obj\Debug\netcoreapp3.1\BGT.Domain.AssemblyInfoInputs.cache
+D:\Code\Projects\Source\BoardGameTracker\BGT.Domain\obj\Debug\netcoreapp3.1\BGT.Domain.AssemblyInfo.cs
+D:\Code\Projects\Source\BoardGameTracker\BGT.Domain\obj\Debug\netcoreapp3.1\BGT.Domain.dll
+D:\Code\Projects\Source\BoardGameTracker\BGT.Domain\obj\Debug\netcoreapp3.1\BGT.Domain.pdb
+>>>>>>> e37e5a003de59fe5f9723eb8cc610982c530ca9a

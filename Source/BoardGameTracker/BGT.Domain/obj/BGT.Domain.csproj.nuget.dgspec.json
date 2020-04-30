@@ -1,24 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "F:\\Code\\Projects\\Source\\BoardGameTracker\\BGT.Domain\\BGT.Domain.csproj": {}
+    "D:\\Code\\Projects\\Source\\BoardGameTracker\\BGT.Domain\\BGT.Domain.csproj": {}
   },
   "projects": {
-    "F:\\Code\\Projects\\Source\\BoardGameTracker\\BGT.Domain\\BGT.Domain.csproj": {
+    "D:\\Code\\Projects\\Source\\BoardGameTracker\\BGT.Domain\\BGT.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Code\\Projects\\Source\\BoardGameTracker\\BGT.Domain\\BGT.Domain.csproj",
+        "projectUniqueName": "D:\\Code\\Projects\\Source\\BoardGameTracker\\BGT.Domain\\BGT.Domain.csproj",
         "projectName": "BGT.Domain",
-        "projectPath": "F:\\Code\\Projects\\Source\\BoardGameTracker\\BGT.Domain\\BGT.Domain.csproj",
-        "packagesPath": "C:\\Users\\vital\\.nuget\\packages\\",
-        "outputPath": "F:\\Code\\Projects\\Source\\BoardGameTracker\\BGT.Domain\\obj\\",
+        "projectPath": "D:\\Code\\Projects\\Source\\BoardGameTracker\\BGT.Domain\\BGT.Domain.csproj",
+        "packagesPath": "C:\\Users\\Vital Vilarinho\\.nuget\\packages\\",
+        "outputPath": "D:\\Code\\Projects\\Source\\BoardGameTracker\\BGT.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\vital\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Vital Vilarinho\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
