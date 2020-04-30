@@ -1,6 +1,6 @@
 ﻿using BGT.Domain.Common;
 
-namespace BGT.Domain
+namespace BGT.Domain.Entities
 {
     public class PlayerInfo : AuditableEntity
     {
