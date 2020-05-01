@@ -1,6 +1,8 @@
-﻿namespace BGT.Infrastructure.Identity
+﻿using Microsoft.AspNetCore.Identity;
+
+namespace BGT.Infrastructure.Identity
 {
-    public class ApplicationUser
+    public class ApplicationUser : IdentityUser
     {
     }
 }

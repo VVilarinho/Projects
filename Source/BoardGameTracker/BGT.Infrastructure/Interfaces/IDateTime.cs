@@ -2,7 +2,7 @@
 
 namespace BGT.Infrastructure.Persistence
 {
-    internal interface IDateTime
+    public interface IDateTime
     {
         DateTime Now { get { return DateTime.Now; } }
     }
