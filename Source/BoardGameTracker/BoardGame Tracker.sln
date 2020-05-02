@@ -15,9 +15,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{670DDFEB-D395-
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{19E39EE3-304D-484D-9BEA-713100C3FAA2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BGT.Domain.UnitTests", "BGT.Domain.UnitTests\BGT.Domain.UnitTests.csproj", "{6EE12B21-1066-43FE-B309-B2872F5FF144}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BGT.Domain.UnitTests", "BGT.Domain.UnitTests\BGT.Domain.UnitTests.csproj", "{6EE12B21-1066-43FE-B309-B2872F5FF144}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BGT.Application.UnitTests", "BGT.Application.UnitTests\BGT.Application.UnitTests.csproj", "{622E51AC-8907-4B91-BDD8-733474930EA5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BGT.Application.UnitTests", "BGT.Application.UnitTests\BGT.Application.UnitTests.csproj", "{622E51AC-8907-4B91-BDD8-733474930EA5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BGT.Infrastructure.IntegrationTests", "BGT.Infrastructure.IntegrationTests\BGT.Infrastructure.IntegrationTests.csproj", "{8AED0AAE-18BE-46CB-8193-A2C4E565CD17}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{622E51AC-8907-4B91-BDD8-733474930EA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{622E51AC-8907-4B91-BDD8-733474930EA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{622E51AC-8907-4B91-BDD8-733474930EA5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8AED0AAE-18BE-46CB-8193-A2C4E565CD17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8AED0AAE-18BE-46CB-8193-A2C4E565CD17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8AED0AAE-18BE-46CB-8193-A2C4E565CD17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8AED0AAE-18BE-46CB-8193-A2C4E565CD17}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -55,6 +61,7 @@ Global
 		{1F1C38BF-A90A-40F3-ACF0-66624FD187FE} = {2A8B2F4C-858D-48AB-AF84-E91044EDCECF}
 		{6EE12B21-1066-43FE-B309-B2872F5FF144} = {19E39EE3-304D-484D-9BEA-713100C3FAA2}
 		{622E51AC-8907-4B91-BDD8-733474930EA5} = {19E39EE3-304D-484D-9BEA-713100C3FAA2}
+		{8AED0AAE-18BE-46CB-8193-A2C4E565CD17} = {19E39EE3-304D-484D-9BEA-713100C3FAA2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5A4161F3-5CE2-44D8-8C4F-C5FE47822391}

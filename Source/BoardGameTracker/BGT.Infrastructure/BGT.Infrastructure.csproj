@@ -13,7 +13,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\BGT.Application\BGT.Application.csproj" />
     <ProjectReference Include="..\BGT.Domain\BGT.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Persistence\IO\" />
   </ItemGroup>
 
 </Project>
