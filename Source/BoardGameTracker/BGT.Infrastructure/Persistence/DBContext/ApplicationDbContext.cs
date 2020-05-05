@@ -27,7 +27,7 @@ namespace BGT.Infrastructure.Persistence
             _dateTime = dateTime;
         }
 
-        public DbSet<BoardGameInfo> BoardGameInfos { get; set; }
+        public DbSet<GameInfo> BoardGameInfos { get; set; }
 
         public DbSet<PlayerInfo> PlayerInfos { get; set; }
 

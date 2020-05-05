@@ -49,10 +49,10 @@ namespace BGT.Infrastructure.IntegrationTests.Persistence
             _sut = new ApplicationDbContext(options, operationalStoreOptions, _currentUserServiceMock.Object, _dateTimeMock.Object);
 
 
-            _sut.BoardGameInfos.Add(new BoardGameInfo
+            _sut.BoardGameInfos.Add(new GameInfo
             {
-                GameId = 1,
-                GameName = "Do this thing."
+                Id = 1,
+                Name = "Do this thing."
             });
 
 
@@ -62,10 +62,10 @@ namespace BGT.Infrastructure.IntegrationTests.Persistence
         [Fact]
         public async Task SaveChangesAsync_GivenNewTodoItem_ShouldSetCreatedProperties()
         {
-            var item = new BoardGameInfo
+            var item = new GameInfo
             {
-                GameId = 2,
-                GameName = "This thing is done.",
+                Id = 2,
+                Name = "This thing is done.",
             };
 
             _sut.BoardGameInfos.Add(item);

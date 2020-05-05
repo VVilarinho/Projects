@@ -7,7 +7,7 @@ namespace BGT.Application.Common.Interfaces
 {
     public interface IApplicationDbContext
     {
-        DbSet<BoardGameInfo> BoardGameInfos { get; set; }
+        DbSet<GameInfo> BoardGameInfos { get; set; }
         DbSet<PlayerInfo> PlayerInfos { get; set; }
         DbSet<GameEvent> GameEvents { get; set; }       
         Task<int> SaveChangesAsync(CancellationToken cancellationToken);

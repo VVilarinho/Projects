@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <AssemblyName>BGT.BGG.Extractor</AssemblyName>
+    <RootNamespace>BGT.BGG.Extractor</RootNamespace>
+    <OutputType>Library</OutputType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="BGGSchema\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="9.0.0" />
+    <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.14.0" />    
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BGT.BGG.Domain\BGT.BGG.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

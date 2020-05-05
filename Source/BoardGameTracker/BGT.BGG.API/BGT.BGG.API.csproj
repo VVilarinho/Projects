@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="9.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BGT.BGG.Domain\BGT.BGG.Domain.csproj" />
+    <ProjectReference Include="..\BGT.BGGExtractor\BGT.BGG.Extractor.csproj" />
+  </ItemGroup>
+
+</Project>
