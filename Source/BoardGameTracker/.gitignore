@@ -13,5 +13,3 @@ debug/
 #NuGet
 packages
 !packages/repositories.config
-!bin/
-!obj/
