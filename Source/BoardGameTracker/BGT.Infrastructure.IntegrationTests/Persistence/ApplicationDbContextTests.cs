@@ -23,7 +23,6 @@ namespace BGT.Infrastructure.IntegrationTests.Persistence
 
         public ApplicationDbContextTests()
         {
-
             // Lets mock some base Data.
             dateTime = new DateTime(2020, 1, 1);
             dateTimeMock = new Mock<IDateTime>();
@@ -90,6 +89,20 @@ namespace BGT.Infrastructure.IntegrationTests.Persistence
             item.LastModified.ShouldNotBeNull();
             item.LastModified.ShouldBe(dateTime);
             item.LastModifiedBy.ShouldBe(userId);
+        }
+
+        [Fact]
+        public async Task SaveChangesAsync_GivenExistingTodoItem_ShouldRemoveIt()
+        {
+            long id = 1;
+
+            var item = await sut.BoardGameInfos.FindAsync(id);
+
+            sut.BoardGameInfos.Remove(item);
+
+            await sut.SaveChangesAsync();
+
+            sut.BoardGameInfos.ShouldNotContain(item);
         }
 
         public void Dispose()
