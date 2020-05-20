@@ -30,9 +30,7 @@ namespace BGT.Infrastructure.Persistence
         public DbSet<GameInfo> BoardGameInfos { get; set; }
 
         public DbSet<PlayerInfo> PlayerInfos { get; set; }
-
         public DbSet<GameEvent> GameEvents { get; set; }
-
 
         public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = new CancellationToken())
         {

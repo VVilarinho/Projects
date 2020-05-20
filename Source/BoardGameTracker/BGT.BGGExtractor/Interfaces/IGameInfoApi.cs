@@ -1,5 +1,4 @@
 ﻿using BGT.BGG.Domain.Entities;
-using System.Collections.Generic;
 
 namespace BGT.BGG.Extractor.Interfaces
 {

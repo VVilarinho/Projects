@@ -4,8 +4,7 @@ namespace BGT.Domain.Entities
 {
     public class PlayerInfo : AuditableEntity
     {
-        public string PlayerID { get; set; }
-
+        public long Id { get; set; }
         public string PlayerName { get; set; }
     }
 }

@@ -13,29 +13,31 @@ namespace BGT.Infrastructure.IntegrationTests.Persistence
 {
     public class ApplicationDbContextTests : IDisposable
     {
-        private readonly string _gameId;
-        private readonly DateTime _dateTime;
-        private readonly Mock<IDateTime> _dateTimeMock;
-        private readonly Mock<ICurrentUserService> _currentUserServiceMock;
-        private readonly ApplicationDbContext _sut;
+        private readonly string userId;
+        private readonly DateTime dateTime;
+
+        private readonly Mock<IDateTime> dateTimeMock;
+        private readonly Mock<ICurrentUserService> currentUserServiceMock;
+
+        private readonly ApplicationDbContext sut;
 
         public ApplicationDbContextTests()
         {
-            _dateTime = new DateTime(3001, 1, 1);
-            _dateTimeMock = new Mock<IDateTime>();
-            _dateTimeMock.Setup(m => m.Now).Returns(_dateTime);
 
-            _gameId = "1";
-            _currentUserServiceMock = new Mock<ICurrentUserService>();
-            _currentUserServiceMock.Setup(m => m.UserId).Returns(_gameId);
+            // Lets mock some base Data.
+            dateTime = new DateTime(2020, 1, 1);
+            dateTimeMock = new Mock<IDateTime>();
+            dateTimeMock.Setup(m => m.Now).Returns(dateTime);
 
+            userId = "CurrentUser";
+
+            currentUserServiceMock = new Mock<ICurrentUserService>();
+            currentUserServiceMock.Setup(m => m.UserId).Returns(userId);
 
 
             var options = new DbContextOptionsBuilder<ApplicationDbContext>()
                 .UseInMemoryDatabase(Guid.NewGuid().ToString())
                 .Options;
-
-
 
             var operationalStoreOptions = Options.Create(
                 new OperationalStoreOptions
@@ -44,19 +46,15 @@ namespace BGT.Infrastructure.IntegrationTests.Persistence
                     PersistedGrants = new TableConfiguration("PersistedGrants")
                 });
 
+            sut = new ApplicationDbContext(options, operationalStoreOptions, currentUserServiceMock.Object, dateTimeMock.Object);
 
-
-            _sut = new ApplicationDbContext(options, operationalStoreOptions, _currentUserServiceMock.Object, _dateTimeMock.Object);
-
-
-            _sut.BoardGameInfos.Add(new GameInfo
+            sut.BoardGameInfos.Add(new GameInfo
             {
                 Id = 1,
                 Name = "Do this thing."
             });
 
-
-            _sut.SaveChanges();
+            sut.SaveChanges();
         }
 
         [Fact]
@@ -68,12 +66,12 @@ namespace BGT.Infrastructure.IntegrationTests.Persistence
                 Name = "This thing is done.",
             };
 
-            _sut.BoardGameInfos.Add(item);
+            sut.BoardGameInfos.Add(item);
 
-            await _sut.SaveChangesAsync();
+            await sut.SaveChangesAsync();
 
-            item.Created.ShouldBe(_dateTime);
-            item.CreatedBy.ShouldBe(_gameId);
+            item.Created.ShouldBe(dateTime);
+            item.CreatedBy.ShouldBe(userId);
         }
 
         [Fact]
@@ -81,20 +79,22 @@ namespace BGT.Infrastructure.IntegrationTests.Persistence
         {
             long id = 1;
 
-            var item = await _sut.BoardGameInfos.FindAsync(id);
+            var item = await sut.BoardGameInfos.FindAsync(id);
 
-            //item.Done = true;
+            item.ReleaseYear = DateTime.Now.Year.ToString();
 
-            await _sut.SaveChangesAsync();
+            await sut.SaveChangesAsync();
+
+            item.ShouldNotBeNull();
 
             item.LastModified.ShouldNotBeNull();
-            item.LastModified.ShouldBe(_dateTime);
-            item.LastModifiedBy.ShouldBe(_gameId);
+            item.LastModified.ShouldBe(dateTime);
+            item.LastModifiedBy.ShouldBe(userId);
         }
 
         public void Dispose()
         {
-            _sut?.Dispose();
+            sut?.Dispose();
         }
     }
 }
