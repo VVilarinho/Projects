@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace BGT.BGG.Extractor.Interfaces
 {
-    public interface ISearchAPI
+    public interface ISearchAPIQueryHandler
     {
         (bool IsSuccess, IEnumerable<SearchResult> searchResults, string ErrorMessage) Search(string wildCard);
     }

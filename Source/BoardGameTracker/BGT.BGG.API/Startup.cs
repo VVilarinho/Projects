@@ -1,14 +1,13 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using AutoMapper;
+using BGT.BGG.API.Interfaces;
+using BGT.BGG.API.Providers;
+using BGT.BGG.Extractor;
+using BGT.BGG.Extractor.Interfaces;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 
 namespace BGT.BGG.API
 {
@@ -24,7 +23,13 @@ namespace BGT.BGG.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddExtractor();
             services.AddControllers();
+            services.AddScoped<ISearchAPIQueryHandler, SearchAPIQueryHandler>();
+            services.AddScoped<IGameInfoApiQueryHandler, GameInfoApiQueryHandler>();
+            services.AddScoped<ISearchProvider, SearchProvider>();
+
+            services.AddAutoMapper(typeof(Startup));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
