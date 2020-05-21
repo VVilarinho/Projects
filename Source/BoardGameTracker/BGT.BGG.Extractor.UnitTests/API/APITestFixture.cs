@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using BGT.BGG.Extractor.Interfaces;
 using System;
 using Xunit;
 
@@ -6,17 +7,14 @@ namespace BGT.BGG.Extractor.UnitTests
 {
     public sealed class APITestFixture : IDisposable
     {
-        public APITestFixture()
-        {
-            //var configurationProvider = new MapperConfiguration(cfg =>
-            //{
-            //    cfg.AddProfile<MappingProfile>();
-            //});
 
-            //Mapper = configurationProvider.CreateMapper();
+        public APITestFixture(ISearchAPIQueryHandler searchAPIQueryHandler)
+        {
+
+            this.searchAPIQueryHandler = searchAPIQueryHandler;
         }
         
-        public IMapper Mapper { get; }
+        public ISearchAPIQueryHandler searchAPIQueryHandler { get; }
 
         public void Dispose()
         {

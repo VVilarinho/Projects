@@ -17,4 +17,8 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\BGT.BGGExtractor\BGT.BGG.Extractor.csproj" />
+  </ItemGroup>
+
 </Project>
