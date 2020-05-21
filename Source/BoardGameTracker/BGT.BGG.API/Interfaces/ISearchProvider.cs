@@ -13,6 +13,8 @@ namespace BGT.BGG.API.Interfaces
         /// <returns></returns>
         Task<(bool IsSuccess, IEnumerable<SearchResult> searchResults, string ErrorMessage)> SearchBoardgameAsync(string wildcard);
 
+        Task<(bool IsSuccess, IEnumerable<SearchResult> searchResults, string ErrorMessage)> SearchBoardgameAsync();
+
         /// <summary>
         /// Executes an search using the BoardGame ID
         /// </summary>

@@ -2,22 +2,21 @@
 using BGT.BGG.Domain.Entities;
 using BGT.BGG.Extractor.Interfaces;
 using Microsoft.Extensions.Logging;
-using System.Collections.Generic;
 
 namespace BGT.BGG.Extractor
 {
-    public class GameInfoApi: IGameInfoApi
+    public class GameInfoApiQueryHandler : IGameInfoApiQueryHandler
     {
-        private readonly ILogger<SearchAPI> logger;
+        private readonly ILogger<SearchAPIQueryHandler> logger;
         private readonly IMapper mapper;
 
-        public GameInfoApi(ILogger<SearchAPI> logger, IMapper mapper)
+        public GameInfoApiQueryHandler(ILogger<SearchAPIQueryHandler> logger, IMapper mapper)
         {
             this.logger = logger;
             this.mapper = mapper;
         }
 
-        public (bool IsSuccess, BoardGameInfo gameInfo, string ErrorMessage) GetBoardGameInfo(int id)
+        public (bool IsSuccess, BoardGameInfo gameInfo, string ErrorMessage) Handle(int id)
         {
             throw new System.NotImplementedException();
         }

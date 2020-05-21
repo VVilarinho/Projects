@@ -1,29 +1,46 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Logging;
 using AutoMapper;
 using BGT.BGG.Domain.Entities;
 using Microsoft.Extensions.Configuration;
+using BGT.BGG.API.Interfaces;
+using BGT.BGG.Extractor.Interfaces;
 
 namespace BGT.BGG.API.Providers
 {
-    public class SearchProvider: IServiceProvider
+    public class SearchProvider : ISearchProvider
     {
-
-        private readonly Extractor.SearchAPI searchAPI;
-        private readonly Extractor.GameInfoApi gameInfoApi;
+        private readonly ISearchAPIQueryHandler searchHandler;
+        private readonly IGameInfoApiQueryHandler gameInfoHandler;
 
         private readonly ILogger<SearchProvider> logger;
         private readonly IMapper mapper;
 
-        public SearchProvider(ILogger<SearchProvider> logger, IMapper mapper, IConfiguration configuration)
+        public SearchProvider(ILogger<SearchProvider> logger,
+            IMapper mapper,
+            IConfiguration configuration,
+            ISearchAPIQueryHandler searchHandler,
+            IGameInfoApiQueryHandler gameInfoHandler
+            )
         {
             this.logger = logger;
             this.mapper = mapper;
 
-            var configTest= configuration.GetSection("BGGURLs");
+            this.searchHandler = searchHandler;
+            this.gameInfoHandler = gameInfoHandler;
+
+            var configTest = configuration.GetSection("BGGURLs");
+        }
+
+        public async Task<(bool IsSuccess, IEnumerable<SearchResult> searchResults, string ErrorMessage)> SearchBoardgameAsync()
+        {
+            logger?.LogInformation($"Empty Search for testing ");
+
+            var result = searchHandler.Search(string.Empty);
+
+            return (true, result.searchResults, null);
         }
 
         public async Task<(bool IsSuccess, IEnumerable<SearchResult> searchResults, string ErrorMessage)> SearchBoardgameAsync(string wildcard)
@@ -32,12 +49,12 @@ namespace BGT.BGG.API.Providers
             {
                 logger?.LogInformation($"Searching for boardgames with wildcard: {wildcard}");
 
-                var result = searchAPI.Search(wildcard);
+                var result = searchHandler.Search(wildcard);
 
                 if (result.IsSuccess && result.searchResults != null)
                 {
                     logger?.LogInformation("Results found");
-                    
+
                     //var result = mapper.Map<Product>(product);
 
                     return (true, result.searchResults, null);
@@ -58,7 +75,7 @@ namespace BGT.BGG.API.Providers
             {
                 logger?.LogInformation($"Searching for boardgame info: {id}");
 
-                var result = gameInfoApi.GetBoardGameInfo(id);
+                var result = gameInfoHandler.Handle(id);
 
                 if (result.IsSuccess && result.gameInfo != null)
                 {
