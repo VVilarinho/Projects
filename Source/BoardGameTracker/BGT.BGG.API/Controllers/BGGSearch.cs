@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace BGT.BGG.API.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/Search")]
     public class BGGSearch : ControllerBase
     {
         private readonly ISearchProvider searchProvider;
@@ -15,8 +15,20 @@ namespace BGT.BGG.API.Controllers
             this.searchProvider = searchProvider;
         }
 
+        public async Task<IActionResult> SearchAsync()
+        {
+            var all = await searchProvider.SearchBoardgameAsync();
+
+            if (all.IsSuccess)
+            {
+                return Ok(all.searchResults);
+            }
+            return NotFound(all.ErrorMessage);
+        }
+
+
         [HttpGet("{wildCard}")]
-        public async Task<IActionResult> Search(string wildCard)
+        public async Task<IActionResult> SearchAsync(string wildCard)
         {
             var result = await searchProvider.SearchBoardgameAsync(wildCard);
 

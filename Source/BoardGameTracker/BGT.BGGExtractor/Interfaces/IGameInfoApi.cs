@@ -2,8 +2,8 @@
 
 namespace BGT.BGG.Extractor.Interfaces
 {
-    public interface IGameInfoApi
+    public interface IGameInfoApiQueryHandler
     {
-        (bool IsSuccess, BoardGameInfo gameInfo, string ErrorMessage) GetBoardGameInfo(int id);
+        (bool IsSuccess, BoardGameInfo gameInfo, string ErrorMessage) Handle(int id);
     }
 }

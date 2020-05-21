@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 
 namespace BGT.BGG.Extractor
 {
-    public class SearchAPI : ISearchAPI
+    public class SearchAPIQueryHandler : ISearchAPIQueryHandler
     {
-        private readonly ILogger<SearchAPI> logger;
+        private readonly ILogger<SearchAPIQueryHandler> logger;
         private readonly IMapper mapper;
 
-        public SearchAPI(ILogger<SearchAPI> logger, IMapper mapper)
+        public SearchAPIQueryHandler(ILogger<SearchAPIQueryHandler> logger, IMapper mapper)
         {
             this.logger = logger;
             this.mapper = mapper;
@@ -20,6 +20,13 @@ namespace BGT.BGG.Extractor
 
         public (bool IsSuccess, IEnumerable<SearchResult> searchResults, string ErrorMessage) Search(string wildCard)
         {
+            if (string.IsNullOrEmpty(wildCard))
+            {
+                return (true, searchResults:
+                    new List<SearchResult> { new SearchResult() { Id = 1, Name = "DummySearch", YearPublished = "2020" } },
+                    string.Empty);
+            }
+
             throw new System.NotImplementedException();
         }
     }
