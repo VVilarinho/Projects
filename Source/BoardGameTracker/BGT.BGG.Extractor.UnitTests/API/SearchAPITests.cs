@@ -2,21 +2,21 @@
 using Shouldly;
 using Xunit;
 
-namespace BGT.BGG.Extractor.UnitTests
+namespace BGT.BGG.Extractor.UnitTests.API
 {
-    [Collection("GameInfoTests")]
-    public class GameInfoApiTests
+    [Collection("SearchAPITests")]
+    public class SearchAPITests
     {
         [Fact]
-        public async Task SearchHandler_ReturnDummyValue()
+        public async Task SearchHandler_ReturnRandomValues()
         {
-            var handler = new GameInfoApiQueryHandler();
+            var handler = new SearchAPIQueryHandler();
 
             var (IsSuccess, searchResults, ErrorMessage) = await handler.SearchAsync(string.Empty);
-            
+
             IsSuccess.ShouldBeTrue();
             ErrorMessage.ShouldBeEmpty();
-            searchResults.ShouldNotBeNull();
+            searchResults.ShouldNotBeEmpty();            
         }
     }
 }

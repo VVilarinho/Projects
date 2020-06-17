@@ -1,9 +1,10 @@
 ﻿using BGT.BGG.Domain.Entities;
+using System.Threading.Tasks;
 
 namespace BGT.BGG.Extractor.Interfaces
 {
     public interface IGameInfoApiQueryHandler
     {
-        (bool IsSuccess, BoardGameInfo gameInfo, string ErrorMessage) Handle(int id);
+        Task<(bool IsSuccess, BoardGameInfo gameInfo, string ErrorMessage)> SearchAsync(string id);
     }
 }
