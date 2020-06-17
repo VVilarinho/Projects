@@ -12,7 +12,7 @@ namespace BGT.BGG.API.Interfaces
         /// <param name="wildcardName"></param>
         /// <returns></returns>
         Task<(bool IsSuccess, IEnumerable<SearchResult> searchResults, string ErrorMessage)> SearchBoardgameAsync(string wildcard);
-
+                
         Task<(bool IsSuccess, IEnumerable<SearchResult> searchResults, string ErrorMessage)> SearchBoardgameAsync();
 
         /// <summary>
@@ -20,6 +20,6 @@ namespace BGT.BGG.API.Interfaces
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        Task<(bool IsSuccess, BoardGameInfo boardGameInfo, string ErrorMessage)> GetBoardgameAsync(int id);
+        Task<(bool IsSuccess, BoardGameInfo boardGameInfo, string ErrorMessage)> GetBoardgameAsync(string id);
     }
 }

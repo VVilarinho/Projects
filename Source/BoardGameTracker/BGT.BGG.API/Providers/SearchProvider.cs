@@ -38,9 +38,9 @@ namespace BGT.BGG.API.Providers
         {
             logger?.LogInformation($"Empty Search for testing ");
 
-            var result = searchHandler.Search(string.Empty);
+            var result = await searchHandler.SearchAsync(string.Empty);
 
-            return (true, result.searchResults, null);
+            return result;
         }
 
         public async Task<(bool IsSuccess, IEnumerable<SearchResult> searchResults, string ErrorMessage)> SearchBoardgameAsync(string wildcard)
@@ -49,7 +49,7 @@ namespace BGT.BGG.API.Providers
             {
                 logger?.LogInformation($"Searching for boardgames with wildcard: {wildcard}");
 
-                var result = searchHandler.Search(wildcard);
+                var result = await searchHandler.SearchAsync(wildcard);
 
                 if (result.IsSuccess && result.searchResults != null)
                 {
@@ -69,13 +69,13 @@ namespace BGT.BGG.API.Providers
             }
         }
 
-        public async Task<(bool IsSuccess, BoardGameInfo boardGameInfo, string ErrorMessage)> GetBoardgameAsync(int id)
+        public async Task<(bool IsSuccess, BoardGameInfo boardGameInfo, string ErrorMessage)> GetBoardgameAsync(string id)
         {
             try
             {
                 logger?.LogInformation($"Searching for boardgame info: {id}");
 
-                var result = gameInfoHandler.Handle(id);
+                var result = await gameInfoHandler.SearchAsync(id);
 
                 if (result.IsSuccess && result.gameInfo != null)
                 {
